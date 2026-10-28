@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Jakeline Cuco Massoterapia: drenagem linfática, massagem relaxante, terapêutica, modeladora e tratamentos faciais. Atendimento no espaço e em domicílio.">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Jakeline Cuco Massoterapia</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: editorial landing — hero split com foto, faixa de fatos, serviços filtráveis por objetivo, sobre, onde atendo */
+:root{
+  --creme:#F6F1EA; --surface:#FFFFFF; --salvia:#8FA394; --salvia-soft:#DCE3DA;
+  --ameixa:#5E2B3F; --on-ameixa:#F6F1EA; --argila:#EBD3C4; --fg:#1F2A23; --muted:#4B5750; --line:#E0D8CC;
+  --display:'Marcellus', 'Cormorant Garamond', Georgia, serif;
+  --body:'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --creme:#161D18; --surface:#1F2822; --salvia:#8FA394; --salvia-soft:#2A3630;
+  --ameixa:#D49AB0; --on-ameixa:#2A1220; --argila:#4A3039; --fg:#ECE6DD; --muted:#B4BCB4; --line:#33403A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --creme:#161D18; --surface:#1F2822; --salvia:#8FA394; --salvia-soft:#2A3630;
+  --ameixa:#D49AB0; --on-ameixa:#2A1220; --argila:#4A3039; --fg:#ECE6DD; --muted:#B4BCB4; --line:#33403A; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--creme);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--creme)}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ameixa);outline-offset:3px;border-radius:6px}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--ameixa)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;background:var(--ameixa);color:var(--on-ameixa);text-decoration:none;font-weight:700;font-size:15px;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--fg);border:1.5px solid var(--fg)}
+.btn svg{width:18px;height:18px}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--creme);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.seal{width:44px;height:44px;border-radius:50%;background:var(--salvia);color:#1F2A23;display:grid;place-items:center;font-family:var(--display);font-size:17px;flex:0 0 auto}
+.logo b{display:block;font-family:var(--display);font-weight:400;font-size:20px;line-height:1.1}
+.logo small{font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+nav{display:flex;gap:28px;font-size:14px;font-weight:600}
+nav a{text-decoration:none;color:var(--muted)} nav a:hover{color:var(--fg)}
+header .btn{min-height:44px;padding:0 18px;font-size:14px}
+@media (max-width:820px){nav{display:none}}
+@media (max-width:420px){header .btn span{display:none} header .btn{padding:0 14px}}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-block:64px 72px}
+.hero h1{font-size:clamp(40px,6vw,68px)}
+.hero h1 em{font-style:normal;color:var(--ameixa)}
+.hero .lead{font-size:18px;color:var(--muted);max-width:52ch}
+.hero .txt{display:flex;flex-direction:column;gap:24px;min-width:0}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.photo{position:relative;justify-self:center;width:100%;max-width:420px}
+.photo::before{content:"";position:absolute;inset:28px -20px -20px 28px;border-radius:220px 220px 24px 24px;background:var(--salvia)}
+.photo img{position:relative;display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border-radius:220px 220px 24px 24px}
+.photo .tag{position:absolute;left:-12px;bottom:28px;background:var(--surface);border-radius:14px;padding:12px 16px;box-shadow:0 12px 30px rgba(31,42,35,.15);font-size:13px;line-height:1.35}
+.photo .tag b{display:block;font-family:var(--display);font-weight:400;font-size:18px;color:var(--ameixa)}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr;gap:48px;padding-block:40px 56px}.photo{max-width:340px}}
+
+/* fatos */
+.facts{background:var(--salvia);color:#1F2A23}
+.facts .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding-block:28px}
+.facts p{font-size:14px;font-weight:600}
+.facts b{display:block;font-family:var(--display);font-weight:400;font-size:26px;line-height:1.2}
+@media (max-width:620px){.facts .wrap{grid-template-columns:1fr;gap:16px}}
+
+/* serviços */
+section{padding-block:80px}
+.head{display:flex;flex-direction:column;gap:14px;max-width:680px;margin-bottom:32px}
+.head h2{font-size:clamp(32px,4.4vw,48px)}
+.head p{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.chip{min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);font:600 14px var(--body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--fg);color:var(--creme);border-color:var(--fg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:20px}
+.card{background:var(--surface);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px;border:1px solid var(--line)}
+.card .cat{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.card h3{font-size:26px}
+.meta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.meta span{font-size:14px;color:var(--muted);font-weight:600}
+.meta strong{font-family:var(--display);font-weight:400;font-size:26px;color:var(--ameixa)}
+.card p{font-size:15px;color:var(--muted)}
+.inc{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.inc li{font-size:12.5px;font-weight:600;background:var(--salvia-soft);color:var(--fg);padding:6px 12px;border-radius:999px}
+.card a.more{margin-top:auto;align-self:flex-start;font-weight:700;font-size:14px;color:var(--ameixa);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;gap:6px}
+.card a.more:hover{text-decoration:underline}
+
+/* sobre */
+.about{background:var(--surface)}
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.about .big{display:flex;flex-direction:column;gap:20px}
+.about .big h2{font-size:clamp(32px,4.4vw,48px)}
+.ring{width:132px;height:132px;border-radius:50%;border:1.5px solid var(--ameixa);display:grid;place-items:center}
+.ring div{width:112px;height:112px;border-radius:50%;border:1px solid var(--ameixa);display:grid;place-items:center;font-family:var(--display);font-size:40px;color:var(--ameixa)}
+.about .text{display:flex;flex-direction:column;gap:18px;font-size:17px;color:var(--muted);max-width:62ch;min-width:0}
+.about .text p:first-child{font-family:var(--display);font-size:24px;color:var(--fg);line-height:1.35}
+@media (max-width:820px){.about .wrap{grid-template-columns:1fr;gap:32px}}
+
+/* onde */
+.where .box{background:var(--ameixa);color:var(--on-ameixa);border-radius:28px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
+.where h2{font-size:clamp(30px,4vw,44px)}
+.where .l{display:flex;flex-direction:column;gap:18px;min-width:0}
+.where .l p{opacity:.9}
+.where .card2{background:var(--creme);color:var(--fg);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.where .card2 .lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.where address{font-style:normal;font-size:16px;line-height:1.5}
+.where .phone{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.where .phone span{font-family:var(--display);font-size:24px;font-variant-numeric:tabular-nums;user-select:all}
+.copy{min-height:36px;padding:0 12px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--fg);font:600 13px var(--body);cursor:pointer}
+.where .btn.light{background:var(--on-ameixa);color:var(--ameixa)}
+.where .btn.ghost{color:var(--fg);border-color:var(--fg)}
+@media (max-width:820px){.where .box{grid-template-columns:1fr}}
+
+footer .wrap{padding-block:36px 96px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:13px;color:var(--muted)}
+
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:var(--ameixa);color:var(--on-ameixa);display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.22);z-index:6}
+.fab svg{width:26px;height:26px}
+/* animações */
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes grow{from{opacity:0;transform:translate(-26px,-26px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes ring{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.6);opacity:0}}
+.hero .txt>*{animation:rise .85s cubic-bezier(.2,.7,.2,1) backwards}
+.hero .txt>*:nth-child(2){animation-delay:.12s}
+.hero .txt>*:nth-child(3){animation-delay:.24s}
+.hero .txt>*:nth-child(4){animation-delay:.36s}
+.photo img{animation:rise 1s .2s cubic-bezier(.2,.7,.2,1) backwards}
+.photo::before{animation:grow 1.3s .45s cubic-bezier(.2,.7,.2,1) backwards}
+.photo .tag{animation:rise .8s .95s cubic-bezier(.2,.7,.2,1) backwards}
+.reveal.in{animation:rise .8s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:var(--d,0s)}
+.card{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(31,42,35,.12)}
+header{transition:box-shadow .3s}
+header.scrolled{box-shadow:0 8px 24px rgba(31,42,35,.08)}
+.fab::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--ameixa);animation:ring 2.6s 1.5s ease-out infinite}
+.ring{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.about:hover .ring{transform:rotate(-8deg)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Jakeline Cuco Massoterapia, início">
+      <span class="seal" aria-hidden="true">JC</span>
+      <span><b>Jakeline Cuco</b><small>Massoterapia</small></span>
+    </a>
+    <nav aria-label="Seções">
+      <a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#onde">Onde atendo</a>
+    </nav>
+    <a class="btn wa" href="#" data-msg="Olá, Jakeline! Gostaria de agendar um horário.">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6L3 21z"/></svg><span>Agendar</span>
+    </a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" style="padding-block:0">
+    <div class="wrap">
+      <div class="txt">
+        <p class="eyebrow">Massoterapia · estética · bem-estar</p>
+        <h1>Cuidado que o seu corpo <em>sente</em> no resultado.</h1>
+        <p class="lead">Cada técnica tem uma proposta diferente. O mais importante é entender o seu objetivo para escolher o atendimento ideal, no meu espaço ou na sua casa.</p>
+        <div class="ctas">
+          <a class="btn wa" href="#" data-msg="Olá, Jakeline! Gostaria de agendar um horário.">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6L3 21z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+          <a class="btn ghost" href="#servicos">Ver serviços</a>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="jakeline.jpg" alt="Jakeline Cuco, massoterapeuta, sorrindo em seu espaço de atendimento">
+        <p class="tag"><b>Jakeline Cuco</b>Massoterapeuta há 3 anos</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div class="wrap">
+      <p><b>3 anos</b>cuidando de mulheres</p>
+      <p><b>9 tratamentos</b>corporais e faciais</p>
+      <p><b>Espaço ou domicílio</b>você escolhe onde ser atendida</p>
+    </div>
+  </div>
+
+  <section id="servicos">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Conheça os serviços</p>
+        <h2>Qual é o seu objetivo hoje?</h2>
+        <p>O que muda entre as técnicas é o tempo de sessão e a combinação de tecnologias, manobras e técnicas. Escolha pelo que o seu corpo precisa agora.</p>
+      </div>
+      <div class="chips" role="group" aria-label="Filtrar serviços">
+        <button class="chip" id="f-todos" data-f="todos" aria-pressed="true">Todos</button>
+        <button class="chip" id="f-relaxar" data-f="relaxar" aria-pressed="false">Relaxar e aliviar dores</button>
+        <button class="chip" id="f-corpo" data-f="corpo" aria-pressed="false">Modelar e desinchar</button>
+        <button class="chip" id="f-facial" data-f="facial" aria-pressed="false">Pele e rosto</button>
+      </div>
+      <div class="grid" id="lista"></div>
+    </div>
+  </section>
+
+  <section class="about" id="sobre">
+    <div class="wrap">
+      <div class="big">
+        <div class="ring" aria-hidden="true"><div>JC</div></div>
+        <p class="eyebrow">Sobre</p>
+        <h2>Conheça Jakeline Cuco</h2>
+      </div>
+      <div class="text">
+        <p>Olá, seja muito bem-vinda! Sou massoterapeuta porque acredito que beleza e bem-estar caminham juntos e merecem ser valorizados.</p>
+        <p>Na correria do dia a dia, muitas vezes deixamos de lado algo essencial: cuidar de nós mesmas. Por isso escolhi trabalhar com massoterapia e tratamentos de beleza e bem-estar, oferecendo momentos de cuidado, relaxamento e autoestima.</p>
+        <p>Acredito que cada mulher tem uma beleza única, que merece ser valorizada com carinho e respeito. Minha missão é ajudar cada cliente a se sentir mais confiante, bonita, leve e bem consigo mesma, respeitando a sua individualidade e as suas necessidades.</p>
+        <p>Mais do que tratamentos, quero oferecer uma experiência de acolhimento: um tempo para desacelerar, relaxar e cuidar da própria saúde.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="where" id="onde">
+    <div class="wrap">
+      <div class="box">
+        <div class="l">
+          <p class="eyebrow" style="color:var(--argila)">Onde atendo</p>
+          <h2>No meu espaço ou na sua casa</h2>
+          <p><strong>No espaço:</strong> um ambiente preparado para o seu momento de cuidado, no endereço ao lado.</p>
+          <p><strong>Em domicílio:</strong> eu vou até você, para você receber o tratamento no conforto da sua casa.</p>
+          <p>Agende pelo WhatsApp, me conte o seu objetivo e onde prefere ser atendida.</p>
+          <div class="ctas" style="display:flex;flex-wrap:wrap;gap:12px">
+            <a class="btn light wa" href="#" data-msg="Olá, Jakeline! Gostaria de agendar um horário.">Agendar pelo WhatsApp</a>
+          </div>
+        </div>
+        <div class="card2">
+          <p class="lbl">Endereço do espaço</p>
+          <address>Rua Bonifácio Haendchen, 5305 (casa)<br>Bairro Belchior Alto<br>Próximo à Das Bier Cervejaria<br>CEP 89117-870</address>
+          <iframe title="Mapa do espaço da Jakeline Cuco" src="https://www.google.com/maps?q=Rua%20Bonif%C3%A1cio%20Haendchen%2C%205305%2C%20Belchior%20Alto%2C%2089117-870&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:220px;border:0;border-radius:12px"></iframe>
+          <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Bonif%C3%A1cio%20Haendchen%2C%205305%2C%20Belchior%20Alto%2C%2089117-870" target="_blank" rel="noopener">Ver no Google Maps</a>
+          <p class="lbl" style="margin-top:6px">WhatsApp</p>
+          <div class="phone"><span id="fone">(47) 99727-3221</span><button class="copy" id="copiar" type="button">Copiar</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Jakeline Cuco Massoterapia</p>
+    <p>Atendimento no espaço e em domicílio · (47) 99727-3221</p>
+  </div>
+</footer>
+
+<a class="fab wa" href="#" data-msg="Olá, Jakeline! Gostaria de agendar um horário." aria-label="Agendar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6L3 21z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-2-2l.8-1-1-2L9 9.5z"/></svg>
+</a>
+
+<script>
+const WA = 'https://wa.me/5547997273221?text=';
+const servicos = [
+  {cat:'relaxar', rot:'Relaxar e aliviar dores', nome:'Massagem relaxante', dur:'1h30', preco:160,
+   desc:'Técnica manual para aliviar tensões, reduzir o estresse e a ansiedade. Para quem sente cansaço ou dores musculares leves e quer um relaxamento profundo do corpo e da mente.',
+   inc:['Pedras quentes','Massagem corporal','Pés e mãos','Aromaterapia','Massagem facial']},
+  {cat:'relaxar', rot:'Relaxar e aliviar dores', nome:'Massagem terapêutica', dur:'1h30', preco:170,
+   desc:'Atendimento individualizado para aliviar dores musculares, tensões e desconfortos, com manobras escolhidas para cada corpo. Melhora a mobilidade e a recuperação muscular. Indicada para dores recorrentes, sobrecarga muscular, estresse físico ou limitação de movimento.',
+   inc:['Ventosaterapia (quando indicada)','Pedras quentes','Massagem subdérmica com tecnologia fisioterapêutica']},
+  {cat:'relaxar', rot:'Relaxar e aliviar dores', nome:'Gestacional', dur:'1h', preco:140,
+   desc:'Um momento de autocuidado para desacelerar em meio a tantas mudanças. Diminui o inchaço, a sensação de peso e o desconforto, principalmente nas pernas, nos pés e na lombar. A drenagem, feita com técnica adequada e respeitando cada gestante, traz leveza e bem-estar.',
+   inc:['Drenagem adaptada','Pernas, pés e lombar']},
+  {cat:'corpo', rot:'Modelar e desinchar', nome:'Drenagem linfática', dur:'1h', preco:140,
+   desc:'Massagem suave e rítmica que estimula o sistema linfático. Traz sensação de leveza imediata e ajuda a reduzir inchaços, melhorar o aspecto da celulite, eliminar toxinas e prevenir problemas circulatórios.',
+   inc:['Drenagem corporal','Pés e mãos']},
+  {cat:'corpo', rot:'Modelar e desinchar', nome:'Modeladora', dur:'1h30', preco:150,
+   desc:'Para quem quer reduzir medidas e modelar o corpo, com resultado visível já na primeira sessão. Um protocolo exclusivo que combina massagem rítmica, bombeamento linfático, pressão precisa e deslizamentos suaves.',
+   inc:['Massagem corporal','Pés e mãos','Ativos','Técnica de respiração']},
+  {cat:'corpo', rot:'Modelar e desinchar', nome:'Dreno Shape', dur:'2h', preco:190,
+   desc:'Meu protocolo voltado à estética corporal: drenagem linfática, manobras modeladoras e técnicas de respiração, junto com ultrassom, endermoterapia e correntes elétricas. Estimula a circulação, combate a celulite e a gordura localizada, reduz medidas e melhora a textura da pele.',
+   inc:['Drenagem','Manobras modeladoras','Ultrassom','Endermoterapia','Correntes elétricas']},
+  {cat:'corpo', rot:'Modelar e desinchar', nome:'Lipedema', dur:'1h30', preco:150,
+   desc:'Cuidado individualizado para quem convive com o lipedema. Associa drenagem linfática a recursos tecnológicos para ajudar a reduzir o inchaço, aliviar a sensação de peso nas pernas e trazer mais conforto e qualidade de vida.',
+   inc:['Drenagem corporal','Tecnologia estética','Suplementação']},
+  {cat:'facial', rot:'Pele e rosto', nome:'Limpeza de pele', dur:'2h', preco:180,
+   desc:'O primeiro passo para uma pele bonita e saudável. Remove impurezas, células mortas, cravos e excesso de oleosidade, desobstruindo os poros para uma melhor absorção dos dermocosméticos. A pele fica limpa, fresca e revitalizada.',
+   inc:['Extração','Desobstrução dos poros','Revitalização']},
+  {cat:'facial', rot:'Pele e rosto', nome:'Dermaplaning + revitalização facial', dur:'1h', preco:135,
+   desc:'Começa com o dermaplaning, uma esfoliação com lâmina específica que remove células mortas e os pelinhos finos do rosto, deixando a pele mais lisa e uniforme. Depois, a revitalização com máscaras e produtos selecionados traz hidratação e luminosidade.',
+   inc:['Dermaplaning','Máscaras','Hidratação']}
+];
+const brl = n => 'R$ ' + n.toLocaleString('pt-BR');
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const lista = document.getElementById('lista');
+function render(f){
+  lista.innerHTML = servicos.filter(s => f==='todos' || s.cat===f).map((s, i) => `
+    <article class="card reveal" style="--d:${(i % 3) * 0.1}s">
+      <p class="cat">${esc(s.rot)}</p>
+      <h3>${esc(s.nome)}</h3>
+      <div class="meta"><span>Duração ${esc(s.dur)}</span><strong>${brl(s.preco)}</strong></div>
+      <p>${esc(s.desc)}</p>
+      <ul class="inc" aria-label="Inclui">${s.inc.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
+      <a class="more" target="_blank" rel="noopener" href="${WA + encodeURIComponent('Olá, Jakeline! Gostaria de agendar: ' + s.nome + '.')}">Agendar ${esc(s.nome.toLowerCase())} →</a>
+    </article>`).join('');
+  watch(lista);
+}
+// Aparecer ao rolar: o conteúdo fica visível por padrão; a animação só roda quando o bloco chega à tela.
+const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), { rootMargin: '0px 0px 12% 0px' }) : null;
+function watch(root){ if (io) root.querySelectorAll('.reveal:not(.in)').forEach(el => io.observe(el)); }
+[['.facts p'], ['#servicos .head > *'], ['.chips'], ['.about .big > *'], ['.about .text p'], ['.where .box'], ['.where .card2'], ['footer .wrap']]
+  .forEach(([sel]) => document.querySelectorAll(sel).forEach((el, i) => { el.classList.add('reveal'); el.style.setProperty('--d', (i * 0.1) + 's'); }));
+watch(document);
+render('todos');
+const hdr = document.querySelector('header');
+addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 10), { passive: true });
+document.querySelectorAll('.chip').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', x===b ? 'true' : 'false'));
+  render(b.dataset.f);
+}));
+document.querySelectorAll('a.wa').forEach(a => {
+  a.href = WA + encodeURIComponent(a.dataset.msg);
+  a.target = '_blank'; a.rel = 'noopener';
+});
+document.getElementById('copiar').addEventListener('click', e => {
+  const btn = e.currentTarget, txt = '(47) 99727-3221';
+  const ok = () => { btn.textContent = 'Copiado'; setTimeout(() => btn.textContent = 'Copiar', 1800); };
+  try {
+    navigator.clipboard.writeText(txt).then(ok).catch(() => selectNum());
+  } catch (_) { selectNum(); }
+  function selectNum(){ const r = document.createRange(); r.selectNodeContents(document.getElementById('fone')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+});
+</script>
+
+</body>
+</html>
