@@ -375,7 +375,7 @@ footer a{color:inherit}
 <footer>
   <div class="wrap">
     <p>Jakeline Cuco Massoterapia</p>
-    <p>Atendimento no espaço e home care · (47) 99727-3221 · <a href="https://www.instagram.com/jakeline_cucomassoterapeuta/" target="_blank" rel="noopener">@jakeline_cucomassoterapeuta</a></p>
+    <p>Atendimento no espaço e home care · (47) 99727-3221 · <a href="https://www.instagram.com/jakeline_cucomassoterapeuta/" target="_blank" rel="noopener">@jakeline_cucomassoterapeuta</a> · <a href="privacidade.html">Política de privacidade</a></p>
   </div>
 </footer>
 
@@ -468,6 +468,25 @@ document.getElementById('copiar').addEventListener('click', e => {
   } catch (_) { selectNum(); }
   function selectNum(){ const r = document.createRange(); r.selectNodeContents(document.getElementById('fone')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
 });
+</script>
+
+<!-- Aviso de cookies e Microsoft Clarity (o Clarity só carrega se o visitante aceitar) -->
+<style>.ck{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;max-width:460px;padding:18px 20px;border-radius:18px;background:var(--surface);color:var(--fg);border:1px solid var(--line);box-shadow:0 18px 44px rgba(0,0,0,.22);font-family:var(--body);font-size:14px;line-height:1.5}.ck[hidden]{display:none}.ck strong{font-weight:700}.ck a{color:inherit}.ck-b{display:flex;gap:10px;margin-top:12px}.ck-b button{font:inherit;font-weight:700;font-size:14px;min-height:42px;padding:0 20px;border-radius:999px;cursor:pointer;border:1.5px solid var(--fg);background:transparent;color:var(--fg)}.ck-b button[data-c="aceito"]{background:var(--ameixa);border-color:var(--ameixa);color:var(--on-ameixa)}</style>
+<div class="ck" id="ck" role="dialog" aria-label="Aviso de cookies" hidden>
+  <p><strong>Este site usa cookies</strong> para entender como os visitantes usam a página e melhorar a sua experiência. <a href="privacidade.html">Saiba mais</a></p>
+  <div class="ck-b"><button type="button" data-c="aceito">Aceitar</button><button type="button" data-c="recusado">Recusar</button></div>
+</div>
+<script>
+(function(){
+  var K='jc-cookies', ID='zjznkmto4b', ok=false;
+  function get(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function set(v){try{localStorage.setItem(K,v)}catch(e){}}
+  function load(){if(ok)return;ok=true;(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script",ID);window.clarity('consent');}
+  var box=document.getElementById('ck'), c=get();
+  if(c==='aceito') load();
+  if(!c) setTimeout(function(){box.hidden=false},2600);
+  box.addEventListener('click',function(e){var b=e.target.closest('[data-c]');if(!b)return;set(b.getAttribute('data-c'));box.hidden=true;if(b.getAttribute('data-c')==='aceito')load();});
+})();
 </script>
 </body>
 </html>
